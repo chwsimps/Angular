@@ -3,7 +3,7 @@
   angular.module('MorningRoutine')
   .factory('taskFactory', ['$rootScope', 'Restangular', function ($rootScope, Restangular) {
 
-  var taskBase = Restangular.all('routinelist')
+  var taskBase = Restangular.all('routinelist2')
 
   function getTasks () {
     return taskBase.getList();
@@ -16,7 +16,7 @@
   function addTask (task) {
 
     taskBase.post(task).then( function () {
-      $rootScope.$broadcast('gift: added');
+      $rootScope.$broadcast('task:added');
     });
   }
 
@@ -26,6 +26,6 @@
     addTask: addTask
   }
 
-  ]);
+  }]);
 
 }());

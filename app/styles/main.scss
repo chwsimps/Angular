@@ -24,3 +24,16 @@ body {
     letter-spacing: -1px;
   }
 }
+
+.ng-scope {
+  ul {
+    list-style: none;
+    padding-left: 0;
+    p {
+      display: inline-block;
+    }
+    .est-time-task {
+      float: right;
+    }
+  }
+}

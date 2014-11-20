@@ -1,5 +1,8 @@
 <ul>
   <li ng-repeat="task in tasks">
-    {{ task.todo }} - est. time {{ task.minutes }} min.
+    <input type="checkbox" />
+    <p class="todo-task">{{ task.todo }}</p>
+    <p class="empty-par"></p>
+    <p class="est-time-task">Est. time {{ task.time }} min.</p>
   </li>
 </ul>

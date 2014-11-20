@@ -22,12 +22,12 @@
     <!-- endbuild -->
   </head>
   <body ng-app="MorningRoutine">
-    
+
     <div class="hero-unit">
       <h1>Morning Routine</h1>
       <nav>
-        <a href="#">Tasks</a> |
-        <a href="#">Add</a> |
+        <a href="#/">Tasks</a> |
+        <a href="#/add">Add</a> |
         <a href="#">Done</a>
       </nav>
       <div ng-view></div>
@@ -45,6 +45,8 @@
 
         <!-- build:js scripts/main.js -->
         <script src="scripts/main.js"></script>
+        <script src="scripts/taskFactory.js"></script>
+        <script src="scripts/taskController.js"></script>
         <!-- endbuild -->
 </body>
 </html>
