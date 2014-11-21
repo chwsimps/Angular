@@ -15,7 +15,16 @@
       });
     }
 
+    $scope.doneTask = function (task) {
+      taskFactory.doneTask(task);
+
+      $rootScope.$on('task:deleted', function () {
+        $location.path('/');
+      });
+    }
+
 
   }])
+
 
 }());

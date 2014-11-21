@@ -29,11 +29,21 @@ body {
   ul {
     list-style: none;
     padding-left: 0;
-    p {
+    .todo-task {
+      padding-right: 10px;
       display: inline-block;
     }
+
     .est-time-task {
+      padding-left: 10px;
+      display: inline-block;
+    }
+    .delete-task {
+      text-decoration: none;
+      color: black;
       float: right;
+      font-size: 25px;
+      margin-top: 18px;
     }
   }
 }
