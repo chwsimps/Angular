@@ -17,7 +17,15 @@ RestangularProvider.setBaseUrl('http://tiy-atl-fe-server.herokuapp.com/collectio
     });
   });
 
-  //app.directive()
+  app.directive('removeli', function(){
+    return function($scope, element, attrs){
+      element.bind('click', function(){
+        console.log('delete');  document.getElementById('task-list').removeChild(document.getElementById('task-list').lastChild);
+
+
+      });
+    };
+});
 
 }());
 
@@ -44,7 +52,7 @@ RestangularProvider.setBaseUrl('http://tiy-atl-fe-server.herokuapp.com/collectio
 
   function doneTask (task) {
     taskBase.delete(task).then( function () {
-      $rootScope.$broadcast('task:deleted');
+      $rootScope.$broadcast('tasks:deleted');
     });
   }
 
@@ -81,6 +89,8 @@ RestangularProvider.setBaseUrl('http://tiy-atl-fe-server.herokuapp.com/collectio
 
       $rootScope.$on('task:added', function () {
         $location.path('/');
+
+        $('input')[0].reset;
       });
     }
 

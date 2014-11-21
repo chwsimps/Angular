@@ -17,6 +17,14 @@ RestangularProvider.setBaseUrl('http://tiy-atl-fe-server.herokuapp.com/collectio
     });
   });
 
-  //app.directive()
+  app.directive('removeli', function(){
+    return function($scope, element, attrs){
+      element.bind('click', function(){
+        console.log('delete');  document.getElementById('task-list').removeChild(document.getElementById('task-list').lastChild);
+
+
+      });
+    };
+});
 
 }());

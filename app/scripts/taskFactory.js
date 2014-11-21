@@ -21,7 +21,7 @@
 
   function doneTask (task) {
     taskBase.delete(task).then( function () {
-      $rootScope.$broadcast('task:deleted');
+      $rootScope.$broadcast('tasks:deleted');
     });
   }
 

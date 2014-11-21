@@ -12,6 +12,8 @@
 
       $rootScope.$on('task:added', function () {
         $location.path('/');
+
+        $('input')[0].reset;
       });
     }
 
